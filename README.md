@@ -45,7 +45,7 @@ $ git clone https://github.com/feliperodriguess/eth-block-explorer.git
 # Go into the repository
 $ cd eth-block-explorer
 
-# Install dependencies
+# Install the dependencies
 $ yarn
 
 # Run locally
