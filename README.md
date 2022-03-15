@@ -34,6 +34,24 @@ This project has been developed with the following technologies:
 - [Ethers.js](https://docs.ethers.io/v5/) 📈
 - [Chakra UI](https://chakra-ui.com/) 💅
 
+## 🐺 How to run locally
+
+From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/feliperodriguess/eth-block-explorer.git
+
+# Go into the repository
+$ cd eth-block-explorer
+
+# Install dependencies
+$ yarn
+
+# Run locally
+$ yarn dev
+```
+
 ---
 
 Made with 🖤 by Felipe Rodrigues [Get in touch!](https://www.linkedin.com/in/feliperodriguess/)
