@@ -1,21 +1,30 @@
 import { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
-import { Box, Flex, Grid, Input, Spinner, Text } from "@chakra-ui/react";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {
+  Box,
+  Flex,
+  Grid,
+  IconButton,
+  Input,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 
 import { TransactionCard } from "../../components";
 import { useEthereum } from "../../hooks/use-ethereum";
 import { useDebounce } from "../../hooks/use-debounce";
 import { TransactionsType } from "../../utils/types";
-import {
-  DEBOUNCE_TIME,
-  METAMASK_STATUS,
-  scrollBarStyles,
-} from "../../utils/constants";
+import { DEBOUNCE_TIME, METAMASK_STATUS } from "../../utils/constants";
 import { getFilteredTransactions } from "../../utils/helpers";
+
+import { styles } from "./styles";
 
 const Transactions = () => {
   const { metaMaskStatus, hasProvider, provider } = useEthereum();
   const { blockNumber } = useParams();
+  const navigate = useNavigate();
+
   const [transactions, setTransactions] = useState([] as TransactionsType);
   const [isLoading, setIsLoading] = useState(true);
   const [searchedAddress, setSearchedAddress] = useState("");
@@ -47,35 +56,39 @@ const Transactions = () => {
 
   return (
     <Box>
-      <Text fontSize="2xl" fontWeight="medium" mb={4} textAlign="center">
-        Transactions of Block{" "}
-        <Text as="span" color="pink.400">
-          {Number(blockNumber).toLocaleString("us-EN")}
+      <Flex align="center" gap={6} justify="center">
+        <IconButton
+          icon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          {...styles.iconButton}
+        />
+        <Text textAlign="center" {...styles.title}>
+          Transactions of Block{" "}
+          <Text as="span" display={["block", "inline"]} color="pink.400">
+            {Number(blockNumber).toLocaleString("us-EN")}
+          </Text>
         </Text>
-      </Text>
+      </Flex>
+
       {isLoading ? (
         <Flex align="center" mt={4}>
           <Spinner mx="auto" color="pink.500" />
         </Flex>
       ) : (
         <Box>
-          <Flex align="center" justify="space-between" my={8}>
+          <Flex flexDir={["column", "row"]} {...styles.header}>
             <Input
-              borderWidth="2px"
-              colorScheme="pink"
-              placeholder="Search transaction by address"
+              placeholder="Search transactions by wallet"
               onChange={(event) => setSearchedAddress(event.target.value)}
-              maxW="300px"
               value={searchedAddress}
-              _focus={{ borderColor: "pink.500" }}
+              {...styles.input}
             />
             <Text
-              fontSize="xl"
-              fontWeight="medium"
               textAlign="center"
+              {...styles.transactionsCount}
             >{`${transactions.length} transactions`}</Text>
           </Flex>
-          <Grid gap={4} maxH="500px" overflow="auto" css={scrollBarStyles}>
+          <Grid {...styles.transactionsContainer}>
             {transactions.map((transaction) => (
               <TransactionCard
                 key={transaction.hash}

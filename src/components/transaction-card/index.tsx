@@ -20,7 +20,7 @@ const TransactionProperty = ({
     <Text {...styles.text} color="white">
       {title}:
     </Text>
-    <Text {...styles.text} fontWeight="normal" ml={4}>
+    <Text {...styles.text} fontWeight="normal" ml={[2, 4]}>
       {value}
     </Text>
   </Flex>
@@ -28,6 +28,8 @@ const TransactionProperty = ({
 
 const TransactionCard = ({ transaction }: TransactionCardProps) => {
   const { from, gasPrice, hash, to, value } = transaction;
+
+  console.log("transaction", transaction);
 
   return (
     <Grid {...styles.container}>
@@ -39,7 +41,7 @@ const TransactionCard = ({ transaction }: TransactionCardProps) => {
         value={`${convertWeiToEth(gasPrice!)} ETH`}
       />
       <TransactionProperty
-        title="Transacted Value"
+        title="Value"
         value={`${convertWeiToEth(value)} ETH`}
       />
     </Grid>

@@ -1,9 +1,13 @@
 export const styles = {
   button: {
-    fontSize: ["0.9rem", "0.85rem", "0.85rem"],
-    w: ["100%", "auto"],
+    colorScheme: "pink",
+    mt: 4,
+    mb: 2,
   },
   container: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
     bgColor: "gray.900",
     borderRadius: 16,
     borderColor: "pink.400",
@@ -12,7 +16,7 @@ export const styles = {
     maxWidth: 450,
     mt: 4,
     p: 4,
-    w: ["92vw", "92vw", "auto"],
+    w: ["87vw", "auto"],
   },
   text: {
     color: "gray.400",

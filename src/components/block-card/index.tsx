@@ -1,7 +1,7 @@
 import { Button, Container, Flex, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { formatTimestamp, parseHash } from "../../utils/helpers";
 
+import { formatTimestamp, parseHash } from "../../utils/helpers";
 import { Block } from "../../utils/types";
 import { styles } from "./styles";
 
@@ -42,11 +42,8 @@ const BlockCard = ({ block }: BlockCardProps) => {
       <BlockProperty title="Miner" value={parseHash(block.miner)} />
       <BlockProperty title="Nonce" value={parseHash(block.nonce)} />
       <Button
-        colorScheme="pink"
-        isFullWidth
-        mt={4}
-        mb={2}
         onClick={() => navigate(`/blocks/${block.number}/transactions`)}
+        {...styles.button}
       >
         View Transactions
       </Button>

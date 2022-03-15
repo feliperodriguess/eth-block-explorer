@@ -1,6 +1,6 @@
 import { BigNumber, ethers } from "ethers";
 
-export const parseHash = (address: string, startLength = 8, endLength = -8) =>
+export const parseHash = (address: string, startLength = 5, endLength = -5) =>
   `${address.slice(0, startLength)}...${address.slice(endLength)}`;
 
 export const convertWeiToEth = (value: BigNumber) =>

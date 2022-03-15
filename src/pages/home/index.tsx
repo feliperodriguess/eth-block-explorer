@@ -41,9 +41,9 @@ const Home = () => {
 
   return (
     <Box>
-      <Text fontWeight="medium" fontSize="lg">
+      <Text fontWeight="medium" fontSize={["sm", "lg"]} textAlign="center">
         Connected Wallet:{" "}
-        <Text as="span" color="pink.500">
+        <Text as="span" color="pink.500" isTruncated>
           {address}
         </Text>
       </Text>
@@ -54,7 +54,7 @@ const Home = () => {
         </Flex>
       ) : (
         <Container
-          maxHeight="500px"
+          maxHeight={["auto", "500px"]}
           mt={8}
           overflow="auto"
           css={scrollBarStyles}
