@@ -3,11 +3,12 @@
 </h1>
 
 <p align="center">
-  <a href="https://blockfolio.com/">ETH Block Explorer</a> is an application to query the latest blocks and transactions from ETH Blockchain
+  <a href="https://eth-block-explorer-ten.vercel.app/">ETH Block Explorer</a> is an application to query the latest blocks and transactions from ETH Blockchain
 </p>
 
-![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1629065654/Blockfolio_Clone_-_Screenshot_1_ohtl4o.png) 
-![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1629065654/Blockfolio_Clone_-_Screenshot_2_llhujx.png)
+![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317184/eth-explorer-login.png) 
+![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317184/eth-explorer-home.png)
+![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317184/eth-explorer-transactions.png)
 
 ### [Live Demo](https://eth-block-explorer-ten.vercel.app/) 💻
 
