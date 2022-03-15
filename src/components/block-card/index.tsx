@@ -32,7 +32,7 @@ const BlockCard = ({ block }: BlockCardProps) => {
   const navigate = useNavigate();
 
   return (
-    <Container {...styles.container}>
+    <Container flexDirection="column" {...styles.container}>
       <BlockProperty
         title="Number"
         value={Number(block.number).toLocaleString("us-EN")}
@@ -40,7 +40,6 @@ const BlockCard = ({ block }: BlockCardProps) => {
       <BlockProperty title="Date" value={formatTimestamp(block.timestamp)} />
       <BlockProperty title="Hash" value={parseHash(block.hash)} />
       <BlockProperty title="Miner" value={parseHash(block.miner)} />
-      <BlockProperty title="Nonce" value={parseHash(block.nonce)} />
       <Button
         onClick={() => navigate(`/blocks/${block.number}/transactions`)}
         {...styles.button}

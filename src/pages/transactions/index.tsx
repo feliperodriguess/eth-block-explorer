@@ -24,7 +24,6 @@ const Transactions = () => {
   const { metaMaskStatus, hasProvider, provider } = useEthereum();
   const { blockNumber } = useParams();
   const navigate = useNavigate();
-
   const [transactions, setTransactions] = useState([] as TransactionsType);
   const [isLoading, setIsLoading] = useState(true);
   const [searchedAddress, setSearchedAddress] = useState("");
