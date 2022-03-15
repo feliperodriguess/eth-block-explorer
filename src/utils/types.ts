@@ -40,3 +40,17 @@ export interface TransactionResponse extends Transaction {
 }
 
 export type TransactionsType = TransactionResponse[];
+
+declare global {
+  interface Window {
+    ethereum: {
+      on: (method: string, callback?: (arg: any) => void) => Promise<any>;
+      request: (args: EthereumRequestArguments) => Promise<any>;
+      removeListener: (
+        method: string,
+        callback?: (arg: any) => void
+      ) => Promise<any>;
+      selectedAddress: string;
+    };
+  }
+}

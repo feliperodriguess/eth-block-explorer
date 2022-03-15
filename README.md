@@ -6,13 +6,14 @@
   <a href="https://eth-block-explorer-ten.vercel.app/">ETH Block Explorer</a> is an application to query the latest blocks and transactions from ETH Blockchain
 </p>
 
-![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317184/eth-explorer-login.png) 
+![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317184/eth-explorer-login.png)
 ![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317841/eth-explorer-home.png)
 ![App Screenshot](https://res.cloudinary.com/dwrddgz8s/image/upload/v1647317432/eth-explorer-transactions.png)
 
 ### [Live Demo](https://eth-block-explorer-ten.vercel.app/) 💻
 
 ## 🕹 Features
+
 - [x] Display the latest 10 blocks on the Ethereum blockchain
 - [x] Allow the user to select a block and see the transactions associated with it
 - [x] Only the transactions sending ETH should be displayed
@@ -20,8 +21,8 @@
 - [x] Add transaction filtering based on the user wallet address.
 - [x] Wallet Connection & Integration
 - [x] Responsiveness
-- [x] Deploy online to vercel
-- [x] Full accessible 
+- [x] Deploy to Vercel
+- [x] Full accessible
 - [ ] Update the blocks in real time (`ps: Added an action to refresh the latest 10 blocks instead`)
 
 ## 🚀 Technologies
