@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Flex, Text } from "@chakra-ui/react";
 
 import { Home, Login, Transactions } from "./pages";
