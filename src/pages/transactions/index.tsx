@@ -82,10 +82,9 @@ const Transactions = () => {
               value={searchedAddress}
               {...styles.input}
             />
-            <Text
-              textAlign="center"
-              {...styles.transactionsCount}
-            >{`${transactions.length} transactions`}</Text>
+            <Text textAlign="center" {...styles.transactionsCount}>{`${
+              transactions.length
+            } transaction${transactions.length === 1 ? "" : "s"}`}</Text>
           </Flex>
           <Grid {...styles.transactionsContainer}>
             {transactions.map((transaction) => (
